@@ -11,8 +11,8 @@
  */
 
 #include <gtest/gtest.h>
-#include </home/viki/cppSherif/cpp-boilerplateClone/include/lib.hpp>
-
+//#include </home/viki/cppSherif/cpp-boilerplateClone/include/lib.hpp>
+#include <libPID.hpp>
 // First test: pid.calculate(x,y) = x-y
 TEST(calculateMethod, should_pass)
 {
