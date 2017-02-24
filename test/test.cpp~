@@ -17,8 +17,8 @@
 TEST(calculateMethod, should_pass)
 {
     PID pid;
-    EXPECT_EQ(3, pid.calculate(4,1));
-    EXPECT_EQ(1, pid.calculate(1,0));
+    EXPECT_EQ(2, pid.calculate(4,1));
+    EXPECT_EQ(0, pid.calculate(1,0));
 }
 
 // Second test (Ki): pid.getKi()=pid.setGain(Kp,Ki,Kd) [the Ki value]

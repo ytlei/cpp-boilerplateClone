@@ -1,0 +1,32 @@
+#include <gtest/gtest.h>
+#include </home/viki/cppSherif/cpp-boilerplateClone/include/lib.hpp>
+TEST(calculateMethod, should_pass)
+{
+    PID pid;
+    EXPECT_EQ(3, pid.calculate(4,1));
+    EXPECT_EQ(1, pid.calculate(1,0));
+}
+
+TEST(setGainMethod, should_pass_ki)
+{
+    PID pid;
+    pid.setGain(0,0,0);
+    double ki = pid.getKi();
+    EXPECT_EQ(0, ki);
+};
+
+TEST(setGainMethod, should_pass_kp)
+{
+    PID pid;
+    pid.setGain(0,0,0);
+    double ki = pid.getKp();
+    EXPECT_EQ(0, kp);
+};
+
+TEST(setGainMethod, should_pass_kd)
+{
+    PID pid;
+    pid.setGain(0,0,0);
+    double ki = pid.getKd();
+    EXPECT_EQ(0, kd);
+};

@@ -1,0 +1,33 @@
+#pragma once
+//#ifndef _PID_SOURCE_
+//#define _PID_SOURCE_
+#include<iostream>
+#include <cmath>
+//#include "pid.h"
+
+using namespace std;
+
+class PID
+{
+	public:
+		void setGain(double _kp, double _kd, double _ki);
+		double calculate(double setpoint, double pv);
+	private:
+		double kp;
+		double kd;
+		double ki;
+};
+
+void PID::setGain(double _kp, double _kd, double _ki)
+{
+	this->kp = _kp;
+	this->ki = _ki;
+	this->kd = _kd;
+};
+
+double PID::calculate(double setpoint, double pv)
+{
+	double output = setpoint - pv;
+	return output
+};
+
