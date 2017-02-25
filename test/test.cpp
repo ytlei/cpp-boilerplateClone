@@ -17,8 +17,9 @@
 TEST(calculateMethod, should_pass)
 {
     PID pid;
-    EXPECT_EQ(3, pid.calculate(4,1));
-    EXPECT_EQ(1, pid.calculate(1,0));
+    pid.setGain(0,0,0);
+    EXPECT_EQ(0, pid.calculate(4,1,1));
+    EXPECT_EQ(0, pid.calculate(1,0,1));
 }
 
 // Second test (Ki): pid.getKi()=pid.setGain(Kp,Ki,Kd) [the Ki value]
@@ -28,7 +29,7 @@ TEST(setGainMethod, should_pass_ki)
     pid.setGain(0,0,0);
     double ki = pid.getKi();
     EXPECT_EQ(0, ki);
-};
+}
 
 // Second test (Kp): pid.getKp()=pid.setGain(Kp,Ki,Kd) [the Kp value]
 TEST(setGainMethod, should_pass_kp)
@@ -37,7 +38,7 @@ TEST(setGainMethod, should_pass_kp)
     pid.setGain(0,0,0);
     double kp = pid.getKp();
     EXPECT_EQ(0, kp);
-};
+}
 
 // Second test (Kd): pid.getKi()=pid.setGain(Kp,Ki,Kd) [the Kd value]
 TEST(setGainMethod, should_pass_kd)
@@ -46,4 +47,4 @@ TEST(setGainMethod, should_pass_kd)
     pid.setGain(0,0,0);
     double kd = pid.getKd();
     EXPECT_EQ(0, kd);
-};
+}

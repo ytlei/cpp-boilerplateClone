@@ -17,7 +17,7 @@ int main()
    pid.setGain(0,0,0); // Set gain values (pointless, not used in calculation)
     double val = 5; // initial value (starting point)
     for (int i = 0; i < 2; i++) {
-        double inc = pid.calculate(0, val); // Calculate increment
+        double inc = pid.calculate(0, val,1); // Calculate increment
         printf("val:% 7.3f inc:% 7.3f\n", val, inc); //Print values to console
         val += inc; // add increment to dynamic value
     }

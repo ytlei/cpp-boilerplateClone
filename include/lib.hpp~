@@ -37,19 +37,19 @@ void PID::setGain(double _kp, double _ki, double _kd)
 // subfunction to get the private gain variable Ki
 double PID::getKi()
 {
-	return (ki + 1);
+	return (ki);
 };
 
 // subfunction to get the private gain variable Kp
 double PID::getKp()
 {
-	return (kp + 1);
+	return (kp);
 };
 
 // subfunction to get the private gain variable Kd
 double PID::getKd()
 {
-	return (kd + 1);
+	return (kd);
 };
 
 // subfunction to calculate the increment neccessary to converge previous value (pv) to setpoint
